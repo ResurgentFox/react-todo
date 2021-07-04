@@ -11,7 +11,7 @@ const styles = {
     borderRadius: "5px",
     backgroundColor: "#FADADD",
     marginBottom: ".5rem",
-    fontFamily: "Parisienne, Marck Script",
+    fontFamily: "Marck Script",
     fontSize: "24px",
   },
   input: {
@@ -20,6 +20,16 @@ const styles = {
   strong: {
     fontFamily: "Fuggles",
     fontSize: "26px",
+  },
+  btnRemove: {
+    backgroundColor: "#6c6c6c",
+    border: "1px solid #6c6c6c",
+    color: "pink",
+    borderRadius: "5px",
+    boxShadow: "0px 0px 2px 1px #6c6c6c, 0px 0px 2px 1px #6c6c6c",
+    fontWeight: "bold",
+    fontSize: "18px",
+    cursor: "pointer",
   },
 };
 
@@ -42,7 +52,9 @@ function TodoItem({ todo, index, onChange }) {
         &#46; &nbsp;
         {todo.title}
       </span>
-      <button onClick={() => removeTodo(todo.id)}>&times;</button>
+      <button style={styles.btnRemove} onClick={() => removeTodo(todo.id)}>
+        &times;
+      </button>
     </li>
   );
 }
