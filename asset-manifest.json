@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "//resurgentfox.github.io/react-todo/static/css/main.a0e0e21a.chunk.css",
+    "main.js": "//resurgentfox.github.io/react-todo/static/js/main.34d98ab4.chunk.js",
+    "main.js.map": "//resurgentfox.github.io/react-todo/static/js/main.34d98ab4.chunk.js.map",
+    "runtime-main.js": "//resurgentfox.github.io/react-todo/static/js/runtime-main.2262f0d9.js",
+    "runtime-main.js.map": "//resurgentfox.github.io/react-todo/static/js/runtime-main.2262f0d9.js.map",
+    "static/js/2.86b3f725.chunk.js": "//resurgentfox.github.io/react-todo/static/js/2.86b3f725.chunk.js",
+    "static/js/2.86b3f725.chunk.js.map": "//resurgentfox.github.io/react-todo/static/js/2.86b3f725.chunk.js.map",
+    "static/js/3.ad6a1b1d.chunk.js": "//resurgentfox.github.io/react-todo/static/js/3.ad6a1b1d.chunk.js",
+    "static/js/3.ad6a1b1d.chunk.js.map": "//resurgentfox.github.io/react-todo/static/js/3.ad6a1b1d.chunk.js.map",
+    "static/js/4.bcf73f0b.chunk.js": "//resurgentfox.github.io/react-todo/static/js/4.bcf73f0b.chunk.js",
+    "static/js/4.bcf73f0b.chunk.js.map": "//resurgentfox.github.io/react-todo/static/js/4.bcf73f0b.chunk.js.map",
+    "index.html": "//resurgentfox.github.io/react-todo/index.html",
+    "static/css/main.a0e0e21a.chunk.css.map": "//resurgentfox.github.io/react-todo/static/css/main.a0e0e21a.chunk.css.map",
+    "static/js/2.86b3f725.chunk.js.LICENSE.txt": "//resurgentfox.github.io/react-todo/static/js/2.86b3f725.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2262f0d9.js",
+    "static/js/2.86b3f725.chunk.js",
+    "static/css/main.a0e0e21a.chunk.css",
+    "static/js/main.34d98ab4.chunk.js"
+  ]
+}
