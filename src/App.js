@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import TodoList from "./Todo/TodoList.js";
-import { MyFirstContext } from "./context";
+import { TodoListContext } from "./context";
 import Loader from "./Loader";
 
 const styles = {
@@ -72,7 +72,7 @@ export default function App() {
   }
 
   return (
-    <MyFirstContext.Provider value={{ removeTodo }}>
+    <TodoListContext.Provider value={{ removeTodo }}>
       <div className="wrapper">
         <h1 style={styles.h1}>ToDo List &#128396;</h1>
         <React.Suspense
@@ -95,6 +95,6 @@ export default function App() {
           </p>
         )}
       </div>
-    </MyFirstContext.Provider>
+    </TodoListContext.Provider>
   );
 }

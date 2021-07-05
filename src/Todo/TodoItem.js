@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { MyFirstContext } from "../context";
+import { TodoListContext } from "../context";
 
 const styles = {
   li: {
@@ -34,7 +34,7 @@ const styles = {
 };
 
 function TodoItem({ todo, index, onChange }) {
-  const { removeTodo } = useContext(MyFirstContext);
+  const { removeTodo } = useContext(TodoListContext);
   const classes = [];
   if (todo.completed) {
     classes.push("done");
