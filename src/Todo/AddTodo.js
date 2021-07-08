@@ -8,7 +8,9 @@ const styles = {
     borderRadius: "15px",
     padding: "10px",
     outline: "none",
-    width: "200px",
+    width: "250px",
+    fontFamily: "Marck Script",
+    fontSize: "20px",
   },
   button: {
     cursor: "pointer",
@@ -16,11 +18,12 @@ const styles = {
     borderRadius: "20px",
     color: "#000",
     fontFamily: "Fuggles",
-    fontSize: "26px",
+    fontSize: "28px",
     fontWeight: "bold",
     backgroundColor: "#FADADD",
     padding: "5px",
     width: "100px",
+    height:"50px"
   },
 };
 
@@ -48,8 +51,8 @@ function AddTodo({ onCreate }) {
     }
   }
   return (
-    <form style={{ marginBottom: "1rem" }} onSubmit={submitHandler}>
-      <input style={styles.input} {...input.bind} />
+    <form style={{ marginBottom: "1rem", maxWidth: "100%"}} onSubmit={submitHandler}>
+      <input placeholder="What do you need to do...?" style={styles.input} {...input.bind} />
       <button style={styles.button} type="submit">
         Add Todo
       </button>

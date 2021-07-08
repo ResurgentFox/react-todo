@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import TodoList from "./Todo/TodoList.js";
 import { TodoListContext } from "./context";
 import Loader from "./Loader";
+import { DataStorage } from "./data-storage.js";
 
 const styles = {
   h1: {
@@ -34,41 +35,39 @@ export default function App() {
   const [loading, setLoading] = React.useState(true);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/todos?_limit=9")
-      .then((response) => response.json())
-      .then((todos) => {
-        setTimeout(() => {
-          setTodos(todos);
-          setLoading(false);
-        }, 5000);
-      });
+    const todos = DataStorage.getTodos();
+    setTimeout(() => {
+      setTodos(todos);
+      setLoading(false);
+    }, 5000);
   }, []);
 
+  function updateTodos(todos) {
+    setTodos(todos);
+    DataStorage.setTodos(todos);
+  }
+
   function toggleTodo(id) {
-    setTodos(
-      todos.map((todo) => {
-        if (todo.id === id) {
-          todo.completed = !todo.completed;
-        }
-        return todo;
-      })
-    );
+    updateTodos(todos.map((todo) => {
+      if (todo.id === id) {
+        todo.completed = !todo.completed;
+      }
+      return todo;
+    }));
   }
 
   function removeTodo(id) {
-    setTodos(todos.filter((todo) => todo.id !== id));
+    updateTodos(todos.filter((todo) => todo.id !== id));
   }
 
   function addTodo(title) {
-    setTodos(
-      todos.concat([
-        {
-          title,
-          id: Date.now(),
-          completed: false,
-        },
-      ])
-    );
+    updateTodos(todos.concat([
+      {
+        title,
+        id: Date.now(),
+        completed: false,
+      },
+    ]));
   }
 
   return (
